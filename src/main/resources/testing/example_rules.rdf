@@ -1,0 +1,2 @@
+
+IF m3:Power lessThan 7 Watt THEN Freezing

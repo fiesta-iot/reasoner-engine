@@ -1,0 +1,82 @@
+
+<div>
+    <h2><span>Execution</span> {{vm.execution.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.execution.status}}</span>
+        </dd>
+
+        <dt><span>Started</span></dt>
+        <dd>
+            <span>{{vm.execution.started | date:'medium'}}</span>
+        </dd>
+        <dt><span>Ended</span></dt>
+        <dd>
+            <span>{{vm.execution.ended | date:'medium'}}</span>
+        </dd>
+        <dt><span>Rule Content</span></dt>
+        <dd>
+            <span>
+                <pre><code class="language-css">
+                {{vm.execution.ruleContent}}
+                </code></pre>
+            </span>
+        </dd>
+        <dt><span>Original Data</span></dt>
+        <dd>
+            <span>
+                 <pre><code class="language-css">
+                {{vm.execution.originalData}}
+                 </code></pre>
+            </span>
+        </dd>
+        <dt><span>Inffered Data</span></dt>
+        <dd>
+            <span>
+                <pre><code class="language-css">
+                {{vm.execution.infferedData}}
+                 </code></pre>
+            </span>
+        </dd>
+        <dt><span>Full Data</span></dt>
+        <dd>
+            <span>
+                <pre><code class="language-css">
+                {{vm.execution.fullData}}
+                </code></pre>
+
+            </span>
+        </dd>
+        <dt><span>User Id</span></dt>
+        <dd>
+            <span>{{vm.execution.userId}}</span>
+        </dd>
+        <dt><span>Sensor</span></dt>
+        <dd>
+            <span>
+            <textarea rows="3" cols="100" type="text" class="form-control"  readonly>
+                     {{vm.execution.sensor}}
+                </textarea>
+
+            </span>
+        </dd>
+        <dt><span>Register Rule</span></dt>
+        <dd>
+            <a ui-sref="register-rule-detail({id:vm.execution.registerRule.id})">{{vm.execution.registerRule.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <!--<button type="button" ui-sref="execution-detail.edit({id:vm.execution.id})" class="btn btn-primary">-->
+        <!--<span class="glyphicon glyphicon-pencil"></span>-->
+        <!--<span class="hidden-xs hidden-sm"> Edit</span>-->
+    <!--</button>-->
+</div>

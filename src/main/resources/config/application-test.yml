@@ -1,0 +1,114 @@
+# ===================================================================
+# Spring Boot configuration for the "prod" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+
+spring:
+    profiles:
+        active: test
+        include: swagger, no-liquibase
+    devtools:
+        restart:
+            enabled: false
+        livereload:
+            enabled: false
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+
+        url: jdbc:mysql://localhost:3306/fiesta_reasoner_engine?useUnicode=true&characterEncoding=utf8&useSSL=false
+        name:
+        username: fiesta-iot
+        password: F135t@pass
+        hikari:
+            data-source-properties:
+                cachePrepStmts: true
+                prepStmtCacheSize: 250
+                prepStmtCacheSqlLimit: 2048
+                useServerPrepStmts: true
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        database: MYSQL
+        show-sql: false
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: false
+    mail:
+        host: localhost
+        port: 25
+        username:
+        password:
+    thymeleaf:
+        cache: true
+    jmx:
+        enabled: true
+        default-domain: reasonerEngineMBean
+        server: reasonerEngineMBean
+
+liquibase:
+    contexts: test
+
+server:
+    port: 8081
+    contextPath: /reasoner-engine
+    compression:
+        enabled: true
+        mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+        min-response-size: 1024
+
+# ===================================================================
+# specific properties
+# ===================================================================
+
+fiesta:
+    enpoints:
+        iotRegisterResourceUrl: http://localhost:8080/iot-registry/api/resources
+        iotRegisterTestbedUrl: http://localhost:8080/iot-registry/api/testbeds/
+        iotRegisterTextUrl: http://localhost:8080/iot-registry/api/utils/annotator/testbed
+        ontologyValidatrorObservationUrl: http://localhost:8080/ontologyValidator/Observations
+        ontologyValidatorResourceUrl: http://localhost:8080/ontologyValidator/Resources
+        authenticateUrl: https://platform-dev.fiesta-iot.eu/openam/json/authenticate
+        getUserInfoUrl: https://platform-dev.fiesta-iot.eu/openam/json/users/
+        getUserIdUrl: https://platform-dev.fiesta-iot.eu/openam/json/users?_action=idFromSession
+        ontologyM3LiteUrl: http://ontology.fiesta-iot.eu/ontologyDocs/m3-lite.owl
+        platformBaseURL: https://platform-dev.fiesta-iot.eu/
+        executeQueryBaseURL: https://platform-dev.fiesta-iot.eu/
+    http:
+        cache: # Used by the CachingHttpHeadersFilter
+            timeToLiveInDays: 1461
+    security:
+        authentication:
+            jwt:
+                secret: e5fc202788e0a5a45b17f8817efab262ab21d3bc
+                # Token is valid 24 hours
+                tokenValidityInSeconds: 86400
+    mail: # specific  mail property, for standard properties see MailProperties
+        from: FiestaReasonerEngine@localhost
+        baseUrl: http://my-server-url-to-change # Modify according to your server's URL
+    metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
+        jmx.enabled: true
+        graphite:
+            enabled: false
+            host: localhost
+            port: 2003
+            prefix: FiestaReasonerEngine
+        prometheus:
+            enabled: false
+            endpoint: /prometheusMetrics
+        logs: # Reports Dropwizard metrics in the logs
+            enabled: false
+            reportFrequency: 60 # in seconds
+    logging:
+        logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
+            enabled: false
+            host: localhost
+            port: 5000
+            queueSize: 512

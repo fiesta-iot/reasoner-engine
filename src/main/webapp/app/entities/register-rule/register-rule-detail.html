@@ -1,0 +1,85 @@
+
+<div>
+    <h2><span>Register Rule</span> {{vm.registerRule.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.registerRule.name}}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{vm.registerRule.description}}</span>
+        </dd>
+        <dt><span>Rule Content</span></dt>
+        <dd>
+            <span>
+                <pre><code class="language-css">
+                {{vm.registerRule.ruleContent}}
+                </code></pre>
+            </span>
+        </dd>
+        <!--<dt><span>Data</span></dt>-->
+        <!--<dd>-->
+            <!--<span>-->
+                <!--<pre><code class="language-css">-->
+                <!--{{vm.registerRule.data}}-->
+                <!--</code></pre>-->
+            <!--</span>-->
+        <!--</dd>-->
+        <dt><span>Sensor</span></dt>
+        <dd>
+            <span>
+                <textarea rows="3" cols="100" type="text" class="form-control"  readonly>
+                     {{vm.registerRule.sensor}}
+                </textarea>
+
+
+            </span>
+        </dd>
+        <!--<dt><span>Sensor Meta</span></dt>-->
+        <!--<dd>-->
+            <!--<span>-->
+                <!--<pre><code class="language-css">-->
+                <!--{{vm.registerRule.sensorMeta}}-->
+                <!--</code></pre>-->
+            <!--</span>-->
+        <!--</dd>-->
+        <!--<dt><span>Inferred Data</span></dt>-->
+        <!--<dd>-->
+            <!--<span>-->
+                <!--<pre><code class="language-css">-->
+                <!--{{vm.registerRule.inferredData}}-->
+                <!--</code></pre>-->
+            <!--</span>-->
+        <!--</dd>-->
+        <!--<dt><span>Full Data</span></dt>-->
+        <!--<dd>-->
+            <!--<span>-->
+                <!--<pre><code class="language-css">-->
+                <!--{{vm.registerRule.fullData}}-->
+                <!--</code></pre>-->
+            <!--</span>-->
+        <!--</dd>-->
+        <dt><span>User Id</span></dt>
+        <dd>
+            <span>{{vm.registerRule.userId}}</span>
+        </dd>
+        <dt><span>Reasoning</span></dt>
+        <dd>
+            <a ui-sref="reasoning-detail({id:vm.registerRule.reasoning.id})">{{vm.registerRule.reasoning.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="register-rule-detail.edit({id:vm.registerRule.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

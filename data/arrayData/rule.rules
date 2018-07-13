@@ -1,0 +1,28 @@
+@prefix iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+@prefix m3-lite: <http://purl.org/iot/vocab/m3-lite#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix reasoning: <https://fiesta-iot.eu/reasoning#> .
+
+(?observation rdf:type ssn:Observation),
+(?observation ssn:observedProperty ?observedProperty),
+(?observedProperty rdf:type m3-lite:Power),
+(?observation ssn:observationResult ?sensorOutput),
+(?sensorOutput ssn:hasValue ?obsValue),
+(?obsValue dul:hasDataValue ?dataValue),
+(?obsValue iot-lite:hasUnit ?unit),
+(?unit rdf:type m3-lite:Watt),
+greaterThan(?dataValue, "25"^^xsd:double) -> (?observation reasoning:announce "dangerous_notify"^^xsd:string).(?observation rdf:type ssn:Observation),
+(?observation ssn:observedProperty ?observedProperty),
+(?observedProperty rdf:type m3-lite:Power),
+(?observation ssn:observationResult ?sensorOutput),
+(?sensorOutput ssn:hasValue ?obsValue),
+(?obsValue dul:hasDataValue ?dataValue),
+(?obsValue iot-lite:hasUnit ?unit),
+(?unit rdf:type m3-lite:Watt),
+lessThan(?dataValue, "23"^^xsd:double) -> (?observation reasoning:announce "lowpower_notify"^^xsd:string).

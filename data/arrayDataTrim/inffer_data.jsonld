@@ -1,0 +1,14 @@
+{
+  "@graph" : [ {
+    "@id" : "http://smart-ics.ee.surrey.ac.uk/fiesta-iot/observation#rGOW3LD7gN",
+    "announce" : "lowpower_notify"
+  }, {
+    "@id" : "http://smart-ics.ee.surrey.ac.uk/fiesta-iot/observation#rGOW3LD7gNHung",
+    "announce" : "dangerous_notify"
+  } ],
+  "@context" : {
+    "announce" : {
+      "@id" : "https://fiesta-iot.eu/reasoning#announce"
+    }
+  }
+}

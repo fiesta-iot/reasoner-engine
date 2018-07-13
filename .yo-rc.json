@@ -1,0 +1,29 @@
+{
+  "generator-jbooter": {
+    "jbooterVersion": "1.12.1",
+    "baseName": "FiestaReasonerEngine",
+    "packageName": "eu.fiestaiot.reasoner.service",
+    "packageFolder": "eu/fiestaiot/reasoner/service",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "no",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "e5fc202788e0a5a45b17f8817efab262ab21d3bc",
+    "useSass": false,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}

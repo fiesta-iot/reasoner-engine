@@ -1,0 +1,394 @@
+
+sensor
+
+https://platform-dev.fiesta-iot.eu/iot-registry/api/resources/tRRAK2lA6S5GE…gEcrxPmWuDG-vqcW8xUTwrYj13_jt-t01DzPKZA6v1VYA_UVR77ihfGV9LONi8Tm0Ccv3rzBXR
+
+
+endpoint
+
+
+https://platform-dev.fiesta-iot.eu/iot-registry/api/endpoints/Uxrjw5CHHHkdB…iaDFdeLGjr3YGzNR-l9g5rCh5S3IrbmTPsxPzB4ca402npsUd1YTRlKX4uUlYZL1yc_FgbSCqd
+
+
+data
+
+
+{
+  "@graph" : [ {
+    "@id" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-120",
+    "@type" : "geo:Point",
+    "iot-lite:altRelative" : "2",
+    "iot-lite:relativeLocation" : "http://sws.geonames.org/6695971/",
+    "geo:alt" : 57.863815,
+    "geo:lat" : 51.2433445,
+    "geo:long" : -0.5932438
+  }, {
+    "@id" : "sics:observation#AkMg4m3b0Z",
+    "@type" : "ssn:Observation",
+    "observationResult" : "sics:sensorOutput#AkMg4m3b0Z",
+    "observationSamplingTime" : "sics:timeInterval#UTC_9dAowBOgKG",
+    "observedBy" : "sics:resource/sc-sics-sp-009-power",
+    "observedProperty" : "sics:observationProperty#Power",
+    "location" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-120"
+  }, {
+    "@id" : "sics:observationProperty#Power",
+    "@type" : "mthreelite:Power"
+  }, {
+    "@id" : "sics:observationValue#AkMg4m3b0Z",
+    "@type" : "ssn:ObservationValue",
+    "hasUnit" : "sics:unit#Watt",
+    "dul:hasDataValue" : 1.067128
+  }, {
+    "@id" : "sics:resource/sc-sics-sp-009-power",
+    "@type" : "mthreelite:EnergyMeter"
+  }, {
+    "@id" : "sics:sensorOutput#AkMg4m3b0Z",
+    "@type" : "ssn:SensorOutput",
+    "hasValue" : "sics:observationValue#AkMg4m3b0Z"
+  }, {
+    "@id" : "sics:timeInterval#UTC_9dAowBOgKG",
+    "@type" : "time:Instant",
+    "inXSDDateTime" : "2017-07-20T01:34:00Z"
+  }, {
+    "@id" : "sics:unit#Watt",
+    "@type" : "mthreelite:Watt"
+  } ],
+  "@context" : {
+    "hasValue" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#hasValue",
+      "@type" : "@id"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "observationSamplingTime" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime",
+      "@type" : "@id"
+    },
+    "observedProperty" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedProperty",
+      "@type" : "@id"
+    },
+    "observationResult" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observationResult",
+      "@type" : "@id"
+    },
+    "observedBy" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedBy",
+      "@type" : "@id"
+    },
+    "inXSDDateTime" : {
+      "@id" : "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "relativeLocation" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "altRelative" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "hasUnit" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit",
+      "@type" : "@id"
+    },
+    "hasDataValue" : {
+      "@id" : "http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "onemtom" : "http://www.onem2m.org/ontology/Base_Ontology/base_ontology#",
+    "qudt" : "http://data.qudt.org/qudt/owl/1.0.0/unit.owl#",
+    "iot-lite" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#",
+    "qu" : "http://purl.org/NET/ssnx/qu/qu#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "ns" : "http://creativecommons.org/ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "fiesta-iot" : "http://purl.org/iot/ontology/fiesta-iot#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "ssn" : "http://purl.oclc.org/NET/ssnx/ssn#",
+    "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "sics" : "http://smart-ics.ee.surrey.ac.uk/fiesta-iot/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "terms" : "http://purl.org/dc/terms/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "dul" : "http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+    "time" : "http://www.w3.org/2006/time#",
+    "mthreelite" : "http://purl.org/iot/vocab/m3-lite#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "dc" : "http://purl.org/dc/elements/1.1/"
+  }
+}
+
+
+
+
+
+sensor
+
+https://platform-dev.fiesta-iot.eu/iot-registry/api/resources/Qxone6-WDawPk…jAKFtDgcvyWByM53JUfQQsbVSsgx4YON-iTbsqrU1Ne8BWlm3z2I4Jug58PNbFv__FJRSI9Q==
+
+
+endpoint
+
+
+https://platform-dev.fiesta-iot.eu/iot-registry/api/endpoints/Nb6hvNQl4x6uM…0BPFIqrBNFtLw7zTlWFGV_-CG8KT17APAI7cA-3GolvP2ozEAunsHNQcuTZdpU9EQd90168w==
+
+
+data
+
+
+
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
+    "xhv": "http://www.w3.org/1999/xhtml/vocab#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dul": "http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+    "ssn": "http://purl.oclc.org/NET/ssnx/ssn#",
+    "iot-lite": "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "time": "http://www.w3.org/2006/time#",
+    "qu-unit": "http://purl.oclc.org/NET/ssnx/qu/unit#",
+    "qu-quantity": "http://purl.oclc.org/NET/ssnx/qu/quantity#",
+    "m3-lite": "http://purl.org/iot/vocab/m3-lite#",
+    "sms-srd": "http://api.smartsantander.eu#",
+    "sms-srd-href": "http://api.smartsantander.eu/v2/resources/"
+  },
+  "@graph": [
+    {
+      "@id": "_:b346",
+      "@type": "ssn:Observation",
+      "ssn:observationResult": {
+        "@id": "_:b349"
+      },
+      "ssn:observationSamplingTime": {
+        "@id": "_:b347"
+      },
+      "ssn:observedBy": {
+        "@id": "sms-srd:urn:x-iot:smartsantander:u7jcfa:t72.temperature-ambient.sensor"
+      },
+      "ssn:observedProperty": {
+        "@id": "sms-srd:quantity.urn:x-iot:smartsantander:u7jcfa:t72.temperature-ambient.sensor"
+      },
+      "geo:location": {
+        "@id": "_:b348"
+      }
+    },
+    {
+      "@id": "sms-srd:urn:x-iot:smartsantander:u7jcfa:t72.temperature-ambient.sensor",
+      "ssn:madeObservation": {
+        "@id": "_:b346"
+      }
+    },
+    {
+      "@id": "sms-srd:quantity.urn:x-iot:smartsantander:u7jcfa:t72.temperature-ambient.sensor",
+      "@type": "m3-lite:AirTemperature"
+    },
+    {
+      "@id": "_:b347",
+      "@type": "time:Instant",
+      "time:inXSDDateTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2017-07-14T07:25:38.352Z"
+      }
+    },
+    {
+      "@id": "_:b348",
+      "@type": "geo:Point",
+      "geo:lat": {
+        "@type": "xsd:double",
+        "@value": 43.46104
+      },
+      "geo:long": {
+        "@type": "xsd:double",
+        "@value": -3.80649
+      }
+    },
+    {
+      "@id": "_:b349",
+      "@type": "ssn:SensorOutput",
+      "ssn:hasValue": {
+        "@id": "_:b350"
+      }
+    },
+    {
+      "@id": "_:b350",
+      "@type": "ssn:ObservationValue",
+      "iot-lite:hasUnit": {
+        "@id": "sms-srd:unit.urn:x-iot:smartsantander:u7jcfa:t72.temperature-ambient.sensor"
+      },
+      "dul:hasDataValue": {
+        "@type": "xsd:double",
+        "@value": 18.7
+      }
+    },
+    {
+      "@id": "sms-srd:unit.urn:x-iot:smartsantander:u7jcfa:t72.temperature-ambient.sensor",
+      "@type": "m3-lite:DegreeCelsius"
+    }
+  ]
+}
+
+
+
+
+sensor
+
+
+https://platform-dev.fiesta-iot.eu/iot-registry/api/resources/x1AlxibeGRXJD…rb14DRkpj7mVw5_Ax4eVEsDr1PMu0AJxoj0uQFEZhf743kKon7QVRc-DmsGDO9E6fxBK6Oc9pd
+
+
+endpoint
+
+
+https://platform-dev.fiesta-iot.eu/iot-registry/api/endpoints/JhZal3S3TuczT…YeMwgw7jDolu9KlAqRzfxxHC6zfO5JFRcOc5h6KDT8oM73k1VaSCqPqr1ltcCIf7nJSVHNrEje
+
+
+
+data
+
+
+{
+  "@graph" : [ {
+    "@id" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-144",
+    "@type" : "geo:Point",
+    "iot-lite:altRelative" : "2",
+    "iot-lite:relativeLocation" : "http://sws.geonames.org/6695971/",
+    "geo:alt" : 57.863815,
+    "geo:lat" : 51.2433445,
+    "geo:long" : -0.5932438
+  }, {
+    "@id" : "sics:observation#kBye8De19a",
+    "@type" : "ssn:Observation",
+    "observationResult" : "sics:sensorOutput#kBye8De19a",
+    "observationSamplingTime" : "sics:timeInterval#UTC_4JRowD71zY",
+    "observedBy" : "sics:resource/sc-sics-sp-008-power",
+    "observedProperty" : "sics:observationProperty#Power",
+    "location" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-144"
+  }, {
+    "@id" : "sics:observationProperty#Power",
+    "@type" : "mthreelite:Power"
+  }, {
+    "@id" : "sics:observationValue#kBye8De19a",
+    "@type" : "ssn:ObservationValue",
+    "hasUnit" : "sics:unit#Watt",
+    "dul:hasDataValue" : 0.505867
+  }, {
+    "@id" : "sics:resource/sc-sics-sp-008-power",
+    "@type" : "mthreelite:EnergyMeter"
+  }, {
+    "@id" : "sics:sensorOutput#kBye8De19a",
+    "@type" : "ssn:SensorOutput",
+    "hasValue" : "sics:observationValue#kBye8De19a"
+  }, {
+    "@id" : "sics:timeInterval#UTC_4JRowD71zY",
+    "@type" : "time:Instant",
+    "inXSDDateTime" : "2017-07-20T01:43:00Z"
+  }, {
+    "@id" : "sics:unit#Watt",
+    "@type" : "mthreelite:Watt"
+  } ],
+  "@context" : {
+    "relativeLocation" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "altRelative" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "observationSamplingTime" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime",
+      "@type" : "@id"
+    },
+    "observedProperty" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedProperty",
+      "@type" : "@id"
+    },
+    "observationResult" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observationResult",
+      "@type" : "@id"
+    },
+    "observedBy" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedBy",
+      "@type" : "@id"
+    },
+    "hasUnit" : {
+      "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit",
+      "@type" : "@id"
+    },
+    "hasDataValue" : {
+      "@id" : "http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "inXSDDateTime" : {
+      "@id" : "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasValue" : {
+      "@id" : "http://purl.oclc.org/NET/ssnx/ssn#hasValue",
+      "@type" : "@id"
+    },
+    "onemtom" : "http://www.onem2m.org/ontology/Base_Ontology/base_ontology#",
+    "qudt" : "http://data.qudt.org/qudt/owl/1.0.0/unit.owl#",
+    "iot-lite" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#",
+    "qu" : "http://purl.org/NET/ssnx/qu/qu#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "ns" : "http://creativecommons.org/ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "fiesta-iot" : "http://purl.org/iot/ontology/fiesta-iot#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "ssn" : "http://purl.oclc.org/NET/ssnx/ssn#",
+    "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "sics" : "http://smart-ics.ee.surrey.ac.uk/fiesta-iot/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "terms" : "http://purl.org/dc/terms/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "dul" : "http://www.loa.istc.cnr.it/ontologies/DUL.owl#",
+    "time" : "http://www.w3.org/2006/time#",
+    "mthreelite" : "http://purl.org/iot/vocab/m3-lite#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "dc" : "http://purl.org/dc/elements/1.1/"
+  }
+}
+
+
+
+
+
+
+{ "@graph" : [ { "@id" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-162", "@type" : "geo:Point", "altRelative" : "2", "relativeLocation" : "http://sws.geonames.org/6695971/", "geo:alt" : 57.863815, "geo:lat" : 51.2433445, "geo:long" : -0.5932438 }, { "@id" : "sics:observation#eqryJ6y7W3", "@type" : "ssn:Observation", "observationResult" : "sics:sensorOutput#eqryJ6y7W3", "observationSamplingTime" : "sics:timeInterval#UTC_G1q9Pqv3X8", "observedBy" : "sics:resource/sc-sics-sp-002-power", "observedProperty" : "sics:observationProperty#Power", "" : "cold", "location" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-162" }, { "@id" : "sics:observationProperty#Power", "@type" : "mthreelite:Power" }, { "@id" : "sics:observationValue#eqryJ6y7W3", "@type" : "ssn:ObservationValue", "hasUnit" : "sics:unit#Watt", "dul:hasDataValue" : 0.850233 }, { "@id" : "sics:resource/sc-sics-sp-002-power", "@type" : "mthreelite:EnergyMeter" }, { "@id" : "sics:sensorOutput#eqryJ6y7W3", "@type" : "ssn:SensorOutput", "hasValue" : "sics:observationValue#eqryJ6y7W3" }, { "@id" : "sics:timeInterval#UTC_G1q9Pqv3X8", "@type" : "time:Instant", "inXSDDateTime" : "2017-07-20T11:48:00Z" }, { "@id" : "sics:unit#Watt", "@type" : "mthreelite:Watt" } ], "@context" : { "" : { "@id" : "http://test/announce#" }, "inXSDDateTime" : { "@id" : "http://www.w3.org/2006/time#inXSDDateTime", "@type" : "http://www.w3.org/2001/XMLSchema#dateTime" }, "long" : { "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", "@type" : "http://www.w3.org/2001/XMLSchema#double" }, "lat" : { "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", "@type" : "http://www.w3.org/2001/XMLSchema#double" }, "alt" : { "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt", "@type" : "http://www.w3.org/2001/XMLSchema#double" }, "relativeLocation" : { "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation" }, "altRelative" : { "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative" }, "hasDataValue" : { "@id" : "http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue", "@type" : "http://www.w3.org/2001/XMLSchema#double" }, "hasUnit" : { "@id" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit", "@type" : "@id" }, "hasValue" : { "@id" : "http://purl.oclc.org/NET/ssnx/ssn#hasValue", "@type" : "@id" }, "location" : { "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location", "@type" : "@id" }, "observedProperty" : { "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedProperty", "@type" : "@id" }, "observedBy" : { "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observedBy", "@type" : "@id" }, "observationSamplingTime" : { "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime", "@type" : "@id" }, "observationResult" : { "@id" : "http://purl.oclc.org/NET/ssnx/ssn#observationResult", "@type" : "@id" }, "onemtom" : "http://www.onem2m.org/ontology/Base_Ontology/base_ontology#", "qudt" : "http://data.qudt.org/qudt/owl/1.0.0/unit.owl#", "iot-lite" : "http://purl.oclc.org/NET/UNIS/fiware/iot-lite#", "qu" : "http://purl.org/NET/ssnx/qu/qu#", "owl" : "http://www.w3.org/2002/07/owl#", "ns" : "http://creativecommons.org/ns#", "xsd" : "http://www.w3.org/2001/XMLSchema#", "fiesta-iot" : "http://purl.org/iot/ontology/fiesta-iot#", "rdfs" : "http://www.w3.org/2000/01/rdf-schema#", "ssn" : "http://purl.oclc.org/NET/ssnx/ssn#", "geo" : "http://www.w3.org/2003/01/geo/wgs84_pos#", "sics" : "http://smart-ics.ee.surrey.ac.uk/fiesta-iot/", "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#", "terms" : "http://purl.org/dc/terms/", "dcterms" : "http://purl.org/dc/terms/", "dul" : "http://www.loa.istc.cnr.it/ontologies/DUL.owl#", "time" : "http://www.w3.org/2006/time#", "mthreelite" : "http://purl.org/iot/vocab/m3-lite#", "vann" : "http://purl.org/vocab/vann/", "dc" : "http://purl.org/dc/elements/1.1/" } }

@@ -1,0 +1,26 @@
+<rdf:RDF
+ xmlns:rdfs=”http://www.w3.org/2000/01/rdf−schema#”
+xmlns:m3=”http://sensormeasurement.appspot.com/m3#
+”
+xmlns:lorHealth=”http://sensormeasurement.appspot.com
+/RULES/LinkedOpenRulesHealth.txt”
+ xmlns:lov4iot=”http://sensormeasurement.appspot.com/
+dataset/lov4iot−dataset/”
+ >
+ <m3:Rule rdf:about=”MildHypothermia”>
+ <rdfs:label xml:lang=”en”>MildHypothermia</rdfs:
+label>
+
+ <rdfs:comment xml:lang=”en”>IF m3:
+BodyTemperature greaterThan 33 m3:
+DegreeCelsius AND lessThan 35 m3:DegreeCelsius THEN
+MildHypothermia</rdfs:comment>
+
+ <m3:fromM2MApplication rdf:resource=”&lov4iot;
+Jara”/>
+
+ <m3:ruleUsingM2MDevice rdf:resource=”&m3;
+BodyThermometer”/>
+
+ <m3:hasUrlRule rdf:resource=”&lorHealth;”/>
+ </m3:Rule>

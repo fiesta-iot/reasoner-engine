@@ -1,0 +1,56 @@
+<div style="border:2px solid; border-color:#337ab7;padding:6px;display: table;margin: 0 auto;width:100%; padding-top:10px;">
+    <select ng-model="firstOperator" name="firstOperator">
+        <option value="IF">IF</option>
+    </select>
+    <select class="form-controls" style="width:120px; margin:10px;" id="field_quantitykinds" name="quantitykinds"
+            ng-model="qk" ng-options="quantitykind for quantitykind in quantityKinds" required>
+        <option value="">-- Quantity kind --</option>
+    </select>
+    <div ng-show="editFormManual.quantitykinds.$invalid">
+        <p class="help-block"
+           ng-show="editFormManual.quantitykinds.$error.required">
+            This field is required.
+        </p>
+    </div>
+
+    <select style="margin:10px;width:50px;" ng-model="secondOperator">
+        <option value=">"> &gt; </option>
+        <option value="<"> &lt; </option>
+        <option value="="> &equals; </option>
+        <option value="!="> !&equals; </option>
+
+    </select>
+
+    <input type="text" class="form-controls" style="width:90px;margin:10px;" name="ruleValue" id="field_ruleValue"
+           ng-model="ruleValue"
+           required/>
+
+    <select class="form-controls" style="width:120px;margin:10px;" id="field_uoms" name="uoms" ng-model="uom"
+            ng-options="uom for uom in uoms" required>
+        <option value="">-- Unit of Measurement --</option>
+    </select>
+    <div ng-show="editFormManual.uoms.$invalid">
+        <p class="help-block"
+           ng-show="editFormManual.uoms.$error.required">
+            This field is required.
+        </p>
+    </div>
+
+    <select style="width:70px; margin:10px;" ng-model="thirdOperator">
+
+        <option value="THEN">THEN</option>
+    </select>
+
+    <input type="text" class="form-controls" style="width:200px;margin:10px;" name="infferedData" id="field_inffered_data"
+           ng-model="infferedData"
+           required/>
+
+
+
+        <button type="button"
+                ng-click="Delete($event)"
+                class="btn btn-danger btn-sm">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+            <span class="hidden-xs hidden-sm"></span>
+        </button>
+</div>

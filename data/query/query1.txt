@@ -1,0 +1,44 @@
+PREFIX iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#>
+PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?sensor ?type ?qk ?unit ?endp ?lat ?long
+WHERE {
+	#Device as the basis
+	{
+    	?dev rdf:type/rdfs:subClassOf ssn:Device .
+    	?dev rdf:type ?type .
+    	?dev ssn:onPlatform ?platform .
+    	?platform geo:location ?point .
+    	?point geo:lat ?lat .
+    	?point geo:long ?long .
+    	?dev ssn:hasSubSystem ?sensor .
+    	?sensor iot-lite:hasQuantityKind ?qkr .
+    	?qkr rdf:type ?qk .
+    	?sensor iot-lite:hasUnit ?unitr .
+    	?unitr rdf:type ?unit .
+    	OPTIONAL {
+    		?sensor iot-lite:exposedBy ?serv .
+    		?serv iot-lite:endpoint ?endp .
+		}
+    }
+    UNION
+    #SensingDevice as the basis
+    {
+    	?sensor rdf:type/rdfs:subClassOf ssn:SensingDevice .
+    	?sensor ssn:onPlatform ?platform .
+    	?platform geo:location ?point .
+    	?point geo:lat ?lat .
+    	?point geo:long ?long .
+    	?sensor iot-lite:hasQuantityKind ?qkr .
+    	?qkr rdf:type ?qk .
+    	?sensor iot-lite:hasUnit ?unitr .
+    	?unitr rdf:type ?unit .
+    	OPTIONAL {
+    		?sensor iot-lite:exposedBy ?serv .
+    		?serv iot-lite:endpoint ?endp .
+		}
+    }
+}

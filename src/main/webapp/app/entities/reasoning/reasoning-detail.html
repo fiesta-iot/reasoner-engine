@@ -1,0 +1,76 @@
+
+<div>
+    <h2><span>Rule</span> {{vm.reasoning.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.reasoning.name}}</span>
+        </dd>
+        <dt><span>User Id</span></dt>
+        <dd>
+            <span>{{vm.reasoning.userId}}</span>
+        </dd>
+
+        <dt><span>Content</span></dt>
+        <dd>
+            <span>
+                <pre><code class="language-css">
+                {{vm.reasoning.content}}
+                </code></pre>
+
+            </span>
+        </dd>
+        <dt><span>Sensor</span></dt>
+        <dd>
+            <span>
+
+                <textarea rows="3" cols="100" type="text" class="form-control"  readonly>
+                     {{vm.reasoning.sensor}}
+                </textarea>
+            </span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{vm.reasoning.description}}</span>
+        </dd>
+
+        <!--<dt><span>Sample Sensor Data</span></dt>-->
+        <!--<dd>-->
+            <!--<span>-->
+                <!--<pre><code class="language-css">-->
+                <!--{{vm.reasoning.sensorSampleData}}-->
+                <!--</code></pre>-->
+            <!--</span>-->
+        <!--</dd>-->
+
+
+        <!--<dt><span>Sensor Meta</span></dt>-->
+        <!--<dd>-->
+            <!--<span>-->
+                <!--<pre><code class="language-css">-->
+                <!--{{vm.reasoning.sensorMeta}}-->
+                <!--</code></pre>-->
+            <!--</span>-->
+        <!--</dd>-->
+
+        <!--<dt><span>End point</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.reasoning.sensorEndp}}</span>-->
+        <!--</dd>-->
+
+
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="reasoning-detail.edit({id:vm.reasoning.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,116 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myexecutionLabel"> New Execution</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.execution.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.execution.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="field_registerRule">Register Rule</label>
+            <select class="form-control" id="field_registerRule" name="registerRule" ng-model="vm.execution.registerRule" ng-options="registerRule as registerRule.name for registerRule in vm.registerrules track by registerRule.id"  ng-change = "selectRegister()"  required>
+                <option value="">-- Select Rule Registered --</option>
+            </select>
+        </div>
+        <div ng-show="editForm.registerRule.$invalid">
+            <p class="help-block"
+                ng-show="editForm.registerRule.$error.required">
+                This field is required.
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="field_sensor">Sensor</label>
+            <!--<input type="text" class="form-control" name="sensor" id="field_sensor"-->
+                   <!--ng-model="vm.execution.sensor"-->
+            <!--/>-->
+
+            <textarea rows="3" cols="100" type="text" class="form-control"  id="field_sensor" readonly>
+                     {{vm.execution.sensor}}
+                </textarea>
+
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="field_ruleContent">Rule Content</label>
+            <textarea readonly type="text" class="form-control" name="ruleContent" id="field_ruleContent"
+                   ng-model="vm.execution.ruleContent"
+            ></textarea>
+        </div>
+
+        <div class="form-group" style="display:none;" >
+            <label class="control-label" for="field_originalData">Original Data</label>
+            <textarea   readonly type="text" class="form-control" name="originalData" id="field_originalData"
+                   ng-model="vm.execution.originalData"
+            ></textarea>
+        </div>
+
+        <div class="form-group" style="display:none;">
+            <label class="control-label" for="field_infferedData">Inffered Data</label>
+            <textarea   readonly type="text" class="form-control" name="infferedData" id="field_infferedData"
+                   ng-model="vm.execution.infferedData"
+            ></textarea>
+        </div>
+        <div class="form-group" style="display:none;">
+            <label class="control-label" for="field_fullData">Full Data</label>
+            <textarea   readonly  type="text" class="form-control" name="fullData" id="field_fullData"
+                   ng-model="vm.execution.fullData"
+            ></textarea>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="control-label" for="field_type">Select Time For Execution</label>
+
+
+            <select  class="form-control" id="field_type" name="type" ng-model="vm.type" ng-options="type as type for type in vm.types track by type" ng-change = "selectType()"  >
+                <option value="">-- Select Execution Type --</option>
+            </select>
+
+
+        </div>
+
+
+
+        <div class="form-group" ng-show="vm.execution.type == 'Range'" >
+            <label class="control-label" for="field_start">Start</label>
+            <div class="input-group">
+                <input id="field_start" type="text" class="form-control" name="started" datetime-picker="{{dateformat}}" ng-model="vm.execution.started" is-open="vm.datePickerOpenStatus.started"
+                />
+                <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('started')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+        </div>
+        <div class="form-group" ng-show="vm.execution.type == 'Range'" >
+            <label class="control-label" for="field_end">End</label>
+            <div class="input-group">
+                <input id="field_end" type="text" class="form-control" name="ended" datetime-picker="{{dateformat}}" ng-model="vm.execution.ended" is-open="vm.datePickerOpenStatus.ended"
+                />
+                <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ended')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,155 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myReasoningLabel">Create or edit a Rule - For Semantic Expert</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.reasoning.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.reasoning.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.reasoning.name"
+                    required />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                   ng-model="vm.reasoning.description"
+            />
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="control-label" for="field_quantity">Select Quantity</label>
+            <select class="form-control" id="field_quantity" name="selectedQuantitykind" ng-model="vm.selectedQuantityKind" ng-options="quantitykind for quantitykind in vm.quantityKinds | orderBy:'toString()' " ng-change = "selectQuantitykind()"  required>
+                <option value="">-- Select quantity kind --</option>
+            </select>
+
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label class="control-label" for="field_sensor">Select Sensor</label>
+
+
+            <select size = "10"  class="form-control" id="field_sensor" name="sensor" ng-model="vm.sensor" ng-options="sensor as sensor.sensor for sensor in vm.sensors track by sensor.hashedSensor" ng-init = "vm.sensor = vm.reasoning.sensor" ng-change = "selectSensor()"  required>
+                <option>-- Select Sensor --</option>
+
+            </select>
+
+            <div ng-show="editForm.sensor.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.sensor.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group" ng-show="vm.reasoning.sensor">
+            <label for="id">Selected Sensor ID</label>
+            <textarea rows="3" cols="40" type="text" class="form-control" id="sensor" name="sensor"
+                      ng-model="vm.reasoning.sensor" readonly></textarea>
+        </div>
+
+
+        <div class="form-group" ng-show="vm.reasoning.latitude">
+            <label for="id">Latitude</label>
+            <input type="text" class="form-control" id="latitude" name="latitude"
+                   ng-model="vm.reasoning.latitude" readonly />
+        </div>
+
+        <div class="form-group" ng-show="vm.reasoning.longitude">
+            <label for="id">Longitude</label>
+            <input type="text" class="form-control" id="longitude" name="longitude"
+                   ng-model="vm.reasoning.longitude" readonly />
+        </div>
+
+        <div class="form-group" ng-show="vm.reasoning.quantityKind">
+            <label for="id">Quantity Kind</label>
+            <input type="text" class="form-control" id="quantityKind" name="quantityKind"
+                   ng-model="vm.reasoning.quantityKind" readonly />
+        </div>
+
+        <div class="form-group" ng-show="vm.reasoning.unitOfMeasurement">
+            <label for="id">Unit of Measurement</label>
+            <input type="text" class="form-control" id="unitOfMeasurement" name="unitOfMeasurement"
+                   ng-model="vm.reasoning.unitOfMeasurement" readonly />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="sensorSampleData">Current Sensor Data</label>
+            <textarea style = "display:none;" readonly type="text" class="form-control" name="sensorSampleData" id="sensorSampleData"
+                      ng-model="vm.reasoning.sensorSampleData"
+                      ></textarea>
+
+
+            <pre><code class="language-css">
+                {{vm.reasoning.sensorSampleData}}
+                </code></pre>
+
+
+        </div>
+
+
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" for="sensorMeta">Example Sensor Meta</label>-->
+            <!--<textarea style="display:none;" readonly type="text" class="form-control" name="sensorMeta" id="sensorMeta"-->
+                      <!--ng-model="vm.reasoning.sensorMeta"-->
+            <!--&gt;</textarea>-->
+
+
+            <!--<pre><code class="language-css">-->
+                <!--{{vm.reasoning.sensorMeta}}-->
+                <!--</code></pre>-->
+
+        <!--</div>-->
+
+
+        <div class="form-group">
+            <label class="control-label" for="field_content">Rule content</label>
+            <textarea type="text" class="form-control" name="content" id="field_content"
+                      ng-model="vm.reasoning.content"
+                      required></textarea>
+            <div ng-show="editForm.content.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.content.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <input type="hidden" class="form-control" id="sensorEndp" name="sensorEndp"
+               ng-model="vm.reasoning.sensorEndp"  />
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

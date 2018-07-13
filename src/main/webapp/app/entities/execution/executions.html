@@ -1,0 +1,91 @@
+<div>
+    <h2>Executions</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="execution.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        New Execution
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Start Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>End Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sensor"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="registerRule.name"><span>Register Rule</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="execution in vm.executions track by execution.id">
+                    <td><a ui-sref="execution-detail({id:execution.id})">{{execution.id}}</a></td>
+                    <td>{{execution.started}}</td>
+
+                    <td>{{execution.ended}}</td>
+                    <td>{{execution.status}}</td>
+                    <!--<td>-->
+                        <!--<a ui-sref="register-rule-detail({id:execution.registerRule.id})">{{execution.registerRule.name}}</a>-->
+                    <!--</td>-->
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="execution-detail({id:execution.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <!--<button type="submit"-->
+                                    <!--ui-sref="execution.edit({id:execution.id})"-->
+                                    <!--class="btn btn-primary btn-sm">-->
+                                <!--<span class="glyphicon glyphicon-pencil"></span>-->
+                                <!--<span class="hidden-xs hidden-sm"></span>-->
+                            <!--</button>-->
+                            <button type="submit"
+                                ui-sref="execution.edit({id:execution.id})"
+                            class="btn btn-danger btn-sm">
+                            <!--<span class="glyphicon glyphicon-remove-circle"></span>-->
+                                <span class="glyphicon glyphicon-repeat"></span>
+
+                            <span class="hidden-xs hidden-sm"></span>
+
+
+                            </button>
+
+
+                            <!--<button-->
+                                <!--ng-click="execute(execution.id)"-->
+                                <!--class="btn btn-danger btn-sm">-->
+                                <!--&lt;!&ndash;<span class="glyphicon glyphicon-remove-circle"></span>&ndash;&gt;-->
+                                <!--<span class="glyphicon glyphicon-repeat"></span>-->
+
+                                <!--<span class="hidden-xs hidden-sm"></span>-->
+
+
+                            <!--</button>-->
+                            <!--<button type="submit"-->
+                                    <!--ui-sref="execution.delete({id:execution.id})"-->
+                                    <!--class="btn btn-danger btn-sm">-->
+                                <!--<span class="glyphicon glyphicon-remove-circle"></span>-->
+                                <!--<span class="hidden-xs hidden-sm"></span>-->
+                            <!--</button>-->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

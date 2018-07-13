@@ -1,0 +1,81 @@
+Request URL:http://localhost:8081/api/reasonings?cacheBuster=1506339325249
+Request Method:PUT
+Status Code:200 OK
+Remote Address:[::1]:8081
+Referrer Policy:no-referrer-when-downgrade
+Response Headers
+view source
+Cache-Control:no-cache, no-store, max-age=0, must-revalidate
+Connection:keep-alive
+Content-Type:application/json;charset=UTF-8
+Date:Mon, 25 Sep 2017 11:35:31 GMT
+Expires:0
+Pragma:no-cache
+Transfer-Encoding:chunked
+X-Application-Context:FiestaReasonerEngine:swagger,no-liquibase,dev:8081
+X-Content-Type-Options:nosniff
+X-fiestaReasonerEngineApp-alert:A new reasoning is created with identifier 18
+X-fiestaReasonerEngineApp-params:18
+X-XSS-Protection:1; mode=block
+Request Headers
+view source
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate, br
+Accept-Language:en-US,en;q=0.8,vi;q=0.6
+Connection:keep-alive
+Content-Length:2112
+Content-Type:application/json;charset=UTF-8
+Cookie:__utma=111872281.1548730194.1504486643.1505743471.1505815703.7; __utmz=111872281.1504486643.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+Host:localhost:8081
+Origin:http://localhost:8081
+Referer:http://localhost:8081/
+User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Query String Parameters
+view source
+view URL encoded
+cacheBuster:1506339325249
+Request Payload
+view parsed
+
+
+
+{
+   "id":18,
+   "name":"Demo new rule 4444",
+   "content":"@prefix iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .\n@prefix m3-lite: <http://purl.org/iot/vocab/m3-lite#> .\n@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .\n@prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .\n@prefix time: <http://www.w3.org/2006/time#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix reasoning: <https://fiesta-iot.eu/reasoning#> .\n\n(?observation rdf:type ssn:Observation),\n(?observation ssn:observedProperty ?observedProperty),\n(?observedProperty rdf:type m3-lite:Power),\n(?observation ssn:observationResult ?sensorOutput),\n(?sensorOutput ssn:hasValue ?obsValue),\n(?obsValue dul:hasDataValue ?dataValue),\n(?obsValue iot-lite:hasUnit ?unit),\n(?unit rdf:type m3-lite:Watt),\ngreaterThan(?dataValue, \"25\"^^xsd:double) -> (?observation reasoning:announce \"dangerous_notify\"^^xsd:string).(?observation rdf:type ssn:Observation),\n(?observation ssn:observedProperty ?observedProperty),\n(?observedProperty rdf:type m3-lite:Power),\n(?observation ssn:observationResult ?sensorOutput),\n(?sensorOutput ssn:hasValue ?obsValue),\n(?obsValue dul:hasDataValue ?dataValue),\n(?obsValue iot-lite:hasUnit ?unit),\n(?unit rdf:type m3-lite:Watt),\nlessThan(?dataValue, \"21\"^^xsd:double) -> (?observation reasoning:announce \"lowpower_notify\"^^xsd:string).",
+   "sensor":"https://platform.fiesta-iot.eu/iot-registry/api/resources/VsnDY_ipIeAhy2eCc5jxNRqGyBVsIwso2bO-8KCr7GKnfKLgda8TdXItkjaADUHLb6VnxSxvR7MddDzbM9fR-Crr9BuuRehd9QCZYPKVzsuaAvFxz6BhRc_PTWFEzu2I",
+   "description":"demo edit rule",
+   "latitude":51.243343,
+   "longitude":-0.5932438,
+   "quantityKind":"http://purl.org/iot/vocab/m3-lite#Power",
+   "unitOfMeasurement":"http://purl.org/iot/vocab/m3-lite#Watt",
+   "ruleType":1
+}
+
+400
+{
+    "result": false,
+    "message": "Can not get sensor information given by sensor ID:https://platform.fiesta-iot.eu/iot-registry/api/resources/VsnDY_ipIeAhy2eCc5jxNRqGyBVsIwso2bO-8KCr7GKnfKLgda8TdXItkjaADUHLb6VnxSxvR7MddDzbM9fR-Crr9BuuRehd9QCZYPKVzsuaAvFxz6BhRc_PTWFEzu2I"
+}
+
+
+200
+{
+    "id": 18,
+    "name": "Demo new rule 4444111",
+    "userId": "hungnguyen",
+    "created": "2017-09-25T11:17:51.000+0000",
+    "updated": "2017-09-25T11:43:18.354+0000",
+    "content": "@prefix iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .\n@prefix m3-lite: <http://purl.org/iot/vocab/m3-lite#> .\n@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .\n@prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .\n@prefix time: <http://www.w3.org/2006/time#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix reasoning: <https://fiesta-iot.eu/reasoning#> .\n\n(?observation rdf:type ssn:Observation),\n(?observation ssn:observedProperty ?observedProperty),\n(?observedProperty rdf:type m3-lite:Power),\n(?observation ssn:observationResult ?sensorOutput),\n(?sensorOutput ssn:hasValue ?obsValue),\n(?obsValue dul:hasDataValue ?dataValue),\n(?obsValue iot-lite:hasUnit ?unit),\n(?unit rdf:type m3-lite:Watt),\ngreaterThan(?dataValue, \"25\"^^xsd:double) -> (?observation reasoning:announce \"dangerous_notify\"^^xsd:string).(?observation rdf:type ssn:Observation),\n(?observation ssn:observedProperty ?observedProperty),\n(?observedProperty rdf:type m3-lite:Power),\n(?observation ssn:observationResult ?sensorOutput),\n(?sensorOutput ssn:hasValue ?obsValue),\n(?obsValue dul:hasDataValue ?dataValue),\n(?obsValue iot-lite:hasUnit ?unit),\n(?unit rdf:type m3-lite:Watt),\nlessThan(?dataValue, \"21\"^^xsd:double) -> (?observation reasoning:announce \"lowpower_notify\"^^xsd:string).",
+    "sensor": "https://platform.fiesta-iot.eu/iot-registry/api/resources/VsnDY_ipIeAhy2eCc5jxNRqGyBVsIwso2bO-8KCr7GKnfKLgda8TdXItkjaADUHLb6VnxSxvR7MddDzbM9fR-Crr9BuuRehd9QCZYPKVzsuaAvFxz6BhRc_PTWFEzu2I",
+    "hashedSensor": null,
+    "sensorEndp": null,
+    "sensorSampleData": null,
+    "sensorMeta": null,
+    "description": "demo edit rule",
+    "latitude": 51.243343,
+    "longitude": -0.5932438,
+    "quantityKind": "http://purl.org/iot/vocab/m3-lite#Power",
+    "unitOfMeasurement": "http://purl.org/iot/vocab/m3-lite#Watt",
+    "ruleType": 1
+}

@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dul: <http://www.loa.istc.cnr.it/ontologies/DUL.owl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+(?observation ssn:observedBy ?sensingDevice),
+	(?observation ssn:observationResult ?sensorOutput),
+	(?sensorOutput ssn:hasValue ?obsValue),
+	(?obsValue dul:hasDataValue ?dataValue),
+	(?observation ssn:observationSamplingTime ?instant),
+	(?instant time:inXSDDateTime ?dateTime),
+	greaterThan(?dataValue, "4"^^xsd:double) -> (?observation <http://test/announce#> "hot"^^xsd:string).
+
+(?observation ssn:observedBy ?sensingDevice),
+	(?observation ssn:observationResult ?sensorOutput),
+	(?sensorOutput ssn:hasValue ?obsValue),
+	(?obsValue dul:hasDataValue ?dataValue),
+	(?observation ssn:observationSamplingTime ?instant),
+	(?instant time:inXSDDateTime ?dateTime),
+	lessThan(?dataValue, "2"^^xsd:double) -> (?observation <http://test/announce#> "cold"^^xsd:string).
+
+
+

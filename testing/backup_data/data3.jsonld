@@ -1,0 +1,30 @@
+{
+    "@id" : "sics:observation#rGOW3LD7gNHung",
+    "@type" : "ssn:Observation",
+    "observationResult" : "sics:sensorOutput#rGOW3LD7gNHung",
+    "observationSamplingTime" : "sics:timeInterval#UTC_6qlP50E4KnHung",
+    "observedBy" : "sics:resource/sc-sics-sp-005-power",
+    "observedProperty" : "sics:observationProperty#Power",
+    "location" : "sics:loc#UNIVERSITY_OF_SURREY-unis-ics-desk-103"
+  }, {
+    "@id" : "sics:observationProperty#Power",
+    "@type" : "mthreelite:Power"
+  },
+    {
+    "@id" : "sics:observationValue#rGOW3LD7gNHung",
+    "@type" : "ssn:ObservationValue",
+    "hasUnit" : "sics:unit#Watt",
+    "dul:hasDataValue" : 22.362399
+   },
+   {
+    "@id" : "sics:resource/sc-sics-sp-005-power",
+    "@type" : "mthreelite:EnergyMeter"
+  }, {
+    "@id" : "sics:sensorOutput#rGOW3LD7gNHung",
+    "@type" : "ssn:SensorOutput",
+    "hasValue" : "sics:observationValue#rGOW3LD7gNHung"
+  }, {
+    "@id" : "sics:timeInterval#UTC_6qlP50E4KnHung",
+    "@type" : "time:Instant",
+    "inXSDDateTime" : "2017-08-03T09:47:00Z"
+  }

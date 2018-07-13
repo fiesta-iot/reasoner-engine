@@ -1,0 +1,65 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "registerRule",
+            "otherEntityName": "registerRule",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "created",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "updated",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "started",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "ended",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "ruleContent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "originalData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "infferedData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fullData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sensor",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170611190627",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "excution",
+    "pagination": "pager"
+}

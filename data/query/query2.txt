@@ -1,0 +1,12 @@
+PREFIX iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#>
+PREFIX m3-lite: <http://purl.org/iot/vocab/m3-lite#>
+PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT   ?endp
+WHERE {
+	<https://platform-dev.fiesta-iot.eu/iot-registry/api/resources/1NiQTwHfIgfqKODCcZpmYgtwvYqlZQ0Ycj2wnEoFkfgS-xeviqhbKlcHUQQpttfkTglWwwFwjU6CVXwT3Fh5ONrUE27If0dzZwm1nFeSYdEcRB08HPWy5MMfSBbN6r3y> iot-lite:exposedBy ?serv .
+	?serv iot-lite:endpoint ?endp .
+}

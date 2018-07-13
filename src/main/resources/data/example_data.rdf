@@ -1,0 +1,611 @@
+{
+    "vars": [
+        "time",
+        "qkr",
+        "val",
+        "unit",
+        "sensor"
+    ],
+    "items": [
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "6.89327E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:17:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "9.04111E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:18:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.08094E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:19:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.41753E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:20:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.56762E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:21:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.35857E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:22:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.53492E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:23:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.23091E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:24:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.84486E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:25:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.838E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:26:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.63977E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:27:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.72286E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:28:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "6.85832E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:29:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.84222E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:30:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.89234E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:31:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.3107E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:32:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.37335E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:33:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.74963E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:34:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.27641E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:35:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.17419E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:36:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.02027E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:37:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "8.02027E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:37:00.002Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.2408E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:38:00.002Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.77825E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:39:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "7.76441E-1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:40:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4438867E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:41:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.2637701E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:42:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.2351301E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:43:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.1715013E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:44:00.002Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.2520582E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:45:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.2577823E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:46:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.231536E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:47:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.2590287E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:48:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4548006E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:49:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4021235E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:50:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.8387806E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:51:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0849678E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:52:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0788085E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:53:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.2784713E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:54:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.101685E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:55:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0518764E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:56:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.9386747E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:57:00.001Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0164902E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:58:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.1130474E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T13:59:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.3617207E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:00:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.219648E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:01:00.001^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.8227955E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:02:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.8760859E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:03:00.0023^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.8834784E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:04:00.0019^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3592458E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:05:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4556249E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:06:00.0019^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.576516E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:07:00.0019^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.5718075E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:08:00.0019^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.8030976E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:09:00.002^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4230809E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:10:00.0019^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3704301E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:11:00.0019^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4015366E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:12:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3541416E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:13:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.9053986E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:14:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3473031E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:15:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.351761E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:16:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3625563E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:17:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3943551E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:18:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0824553E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:19:^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4501647E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:20:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.585135E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:21:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3913744E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:22:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3604922E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:23:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.1617018E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:24:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.6275379E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:25:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4309482E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:26:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4295699E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:27:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3549396E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:28:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.9583E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:29:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4789432E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:30:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.476068E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:31:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.5396393E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:32:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4368503E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:33:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.844386E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:34:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3985097E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:35:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4304998E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:36:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4242152E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:37:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.5012393E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:38:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0425847E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:39:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4345092E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:40:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3567003E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:41:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3951794E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:42:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4018993E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:43:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.9980255E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:44:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3816804E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:45:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4170205E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:46:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3726591E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:47:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.363374E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:48:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0680001E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:49:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4237008E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:50:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.4266024E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:51:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.5061193E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:52:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.6163601E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:53:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "2.0034594E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:54:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        },
+        {
+            "unit": "http://purl.org/iot/vocab/m3-lite#Watt",
+            "val": "1.3892444E1^^http://www.w3.org/2001/XMLSchema#double",
+            "time": "2017-04-28T14:55:00Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "qkr": "http://purl.org/iot/vocab/m3-lite#Power"
+        }
+    ]
+}

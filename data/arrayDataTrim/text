@@ -1,0 +1,18 @@
+
+{
+    "@id" : "https://platform-dev.fiesta-iot.eu/iot-registry/api/observations/gFi3Fg1z6sDykhQ-GuFM_Op5PiuUQ2Dgav-95buNCijPq29Vc0pKzckdn-vDcl9SQR_3GFO_pGJu2KnZ0LffWwzOehwX178ycDadgvvM68s=",
+    "@type" : "ssn:SensorOutput",
+    "hasValue" : "https://platform-dev.fiesta-iot.eu/iot-registry/api/observations/gFi3Fg1z6sDykhQ-GuFM_Op5PiuUQ2Dgav-95buNCijPq29Vc0pKzckdn-vDcl9SQR_3GFO_pGJu2KnZ0LffWwzOehwX178ycDadgvvM68s=" => obvalue
+  },
+
+
+
+ {
+            "sensingDevice": "https://platform-dev.fiesta-iot.eu/iot-registry/api/resources/DaCKKYlDSdTp1u0a6aQfAzmQh-Sd4XXYewDTaSCR1uT6NXN9S1iP73ytL_NC_XyqqZ9bac7D0zvxnPoFb8zDKWqsrx0fYQ14UxuIMDnLrtfMvJuGY7fbdnsLsXYTYrls",
+            "dateTime": "2017-05-08T16:26:43Z^^http://www.w3.org/2001/XMLSchema#dateTime",
+            "instant": "https://platform-dev.fiesta-iot.eu/iot-registry/api/observations/XGfAC_G28ozNlDnYnLgUccYKHZHAcMYrql4AHw-THysH0BS-6ODXY_wW2pl5fkhXqxybfID3tr6HIP2gaI8YLDhVae6o9OfcGmlyPjcKO-IyKoFjxZHQ2WH4jEzbZAlh",
+            "dataValue": "2.76036281586E1^^http://www.w3.org/2001/XMLSchema#double",
+            "obsValue": "https://platform-dev.fiesta-iot.eu/iot-registry/api/observations/Br6AdZU7pKUpclX3heMCIy6bhs1gy2DjJ1X9HufW3AzzO3ck749kUMDax6fSvH8-FOo-Ikk_Ior5VtZIdWMpdWe3-tFYxuttXLOU2QRyt7kydcB1DD9LaQiXC3VVNIJY",
+            "sensorOutput": "
+            "observation": "https://platform-dev.fiesta-iot.eu/iot-registry/api/observations/aO6XbuIpA-Cdl-9mJ53b5Zan5bBZs3UgWAOc8_C7M3XY7tCuQswC3sXKT3ElGF57kSj4O01h0tIIUMP5oaa7UoWeZMI0bwLPQdnENiCSnSQ="
+        },

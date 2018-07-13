@@ -1,0 +1,1224 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "FiestaReasonerEngine API documentation",
+        "version": "0.0.1",
+        "title": "FiestaReasonerEngine API",
+        "contact": {},
+        "license": {}
+    },
+    "host": "platform-dev.fiesta-iot.eu",
+    "basePath": "/reasoner-engine",
+    "tags": [
+
+        {
+            "name": "rule-resource",
+            "description": "Rule Resource"
+        },
+
+        {
+            "name": "register-rule-resource",
+            "description": "Register Rule Resource"
+        },
+        {
+            "name": "execution-resource",
+            "description": "Execution Resource"
+        }
+
+    ],
+    "paths": {
+
+        "/api/executions": {
+            "get": {
+                "tags": [
+                    "execution-resource"
+                ],
+                "summary": "getAllExecutions",
+                "operationId": "getAllExecutionsUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number of the requested page",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Size of a page",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Execution"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "execution-resource"
+                ],
+                "summary": "createExecution",
+                "operationId": "createExecutionUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "execution",
+                        "description": "execution",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ExecuteRuleRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Execution"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/executions/{id}": {
+            "get": {
+                "tags": [
+                    "execution-resource"
+                ],
+                "summary": "getExecution",
+                "operationId": "getExecutionUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Execution"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+
+
+        "/api/reasonings": {
+            "get": {
+                "tags": [
+                    "rule-resource"
+                ],
+                "summary": "getAllReasonings",
+                "operationId": "getAllReasoningsUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number of the requested page",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Size of a page",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Reasoning"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "rule-resource"
+                ],
+                "summary": "createReasoning",
+                "operationId": "createReasoningUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "reasoning",
+                        "description": "reasoning",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateRuleWithExpertRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "rule-resource"
+                ],
+                "summary": "updateReasoning",
+                "operationId": "updateReasoningUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "reasoning",
+                        "description": "reasoning",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UpdateRuleWithExpertRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/reasonings/nonExpert": {
+            "post": {
+                "tags": [
+                    "rule-resource"
+                ],
+                "summary": "createReasoningWithnonExpert",
+                "operationId": "createReasoningWithnonExpertUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "reasoning",
+                        "description": "reasoning",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RuleCreationNonExpertRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/reasonings/{id}": {
+            "get": {
+                "tags": [
+                    "rule-resource"
+                ],
+                "summary": "getReasoning",
+                "operationId": "getReasoningUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Reasoning"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/register-rules": {
+            "get": {
+                "tags": [
+                    "register-rule-resource"
+                ],
+                "summary": "getAllRegisterRules",
+                "operationId": "getAllRegisterRulesUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number of the requested page",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Size of a page",
+                        "required": false,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RegisterRule"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "register-rule-resource"
+                ],
+                "summary": "createRegisterRule",
+                "operationId": "createRegisterRuleUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "registerRule",
+                        "description": "registerRule",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RegisterRuleRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/RegisterRule"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "register-rule-resource"
+                ],
+                "summary": "updateRegisterRule",
+                "operationId": "updateRegisterRuleUsingPUT",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "registerRule",
+                        "description": "registerRule",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UpdateRegisterRuleRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/RegisterRule"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/register-rules/{id}": {
+            "get": {
+                "tags": [
+                    "register-rule-resource"
+                ],
+                "summary": "getRegisterRule",
+                "operationId": "getRegisterRuleUsingGET",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/RegisterRule"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/rule/validate": {
+            "post": {
+                "tags": [
+                    "rule-resource"
+                ],
+                "summary": "validateRule",
+                "operationId": "validateRuleUsingPOST",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "*/*"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "validateRequest",
+                        "description": "validateRequest",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ValidateRuleRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ValidateRuleResponse"
+                        }
+                    },
+                    "201": {
+                        "description": "Created"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+
+
+    },
+    "definitions": {
+        "RuleCreationNonExpertRequest": {
+            "type": "object",
+            "required": [
+                "name",
+                "quantityKind",
+                "sensor",
+                "unitOfMeasurement"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "hashedSensor": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RuleOperator"
+                    }
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "sensorEndp": {
+                    "type": "string"
+                },
+                "sensorMeta": {
+                    "type": "string"
+                },
+                "sensorSampleData": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                }
+            }
+        },
+        "UpdateRegisterRuleRequest": {
+            "type": "object",
+            "required": [
+                "id",
+                "name",
+                "ruleId",
+                "sensor"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "ruleId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                }
+            }
+        },
+        "ExecuteRuleRequest": {
+            "type": "object",
+            "required": [
+                "executeType",
+                "registerRuleId"
+            ],
+            "properties": {
+                "ended": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "executeType": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "registerRuleId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "started": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "CreateRuleWithExpertRequest": {
+            "type": "object",
+            "required": [
+                "content",
+                "name",
+                "quantityKind",
+                "sensor",
+                "unitOfMeasurement"
+            ],
+            "properties": {
+                "content": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                }
+            }
+        },
+        "RegisterRuleRequest": {
+            "type": "object",
+            "required": [
+                "name",
+                "ruleId",
+                "sensor"
+            ],
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "ruleId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                }
+            }
+        },
+        "UpdateRuleWithExpertRequest": {
+            "type": "object",
+            "required": [
+                "content",
+                "id",
+                "name",
+                "quantityKind",
+                "sensor",
+                "unitOfMeasurement"
+            ],
+            "properties": {
+                "content": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                }
+            }
+        },
+        "RuleOperator": {
+            "type": "object",
+            "properties": {
+                "firstOperator": {
+                    "type": "string"
+                },
+                "infferedData": {
+                    "type": "string"
+                },
+                "qk": {
+                    "type": "string"
+                },
+                "ruleValue": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "secondOperator": {
+                    "type": "string"
+                },
+                "thirdOperator": {
+                    "type": "string"
+                },
+                "uom": {
+                    "type": "string"
+                }
+            }
+        },
+        "GetSensorDataRequest": {
+            "type": "object",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            }
+        },
+        "Execution": {
+            "type": "object",
+            "required": [
+                "registerRule"
+            ],
+            "properties": {
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "ended": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "fullData": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "infferedData": {
+                    "type": "string"
+                },
+                "originalData": {
+                    "type": "string"
+                },
+                "registerRule": {
+                    "$ref": "#/definitions/RegisterRule"
+                },
+                "ruleContent": {
+                    "type": "string"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "started": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            }
+        },
+        "Reasoning": {
+            "type": "object",
+            "required": [
+                "content",
+                "name",
+                "sensor"
+            ],
+            "properties": {
+                "content": {
+                    "type": "string"
+                },
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "hashedSensor": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "ruleType": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "sensorEndp": {
+                    "type": "string"
+                },
+                "sensorMeta": {
+                    "type": "string"
+                },
+                "sensorSampleData": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            }
+        },
+        "ValidateRuleRequest": {
+            "type": "object",
+            "required": [
+                "rule",
+                "sensorId"
+            ],
+            "properties": {
+                "rule": {
+                    "type": "string"
+                },
+                "sensorId": {
+                    "type": "string"
+                }
+            }
+        },
+        "GetSensorByQuantityKind": {
+            "type": "object",
+            "required": [
+                "quantityKind"
+            ],
+            "properties": {
+                "quantityKind": {
+                    "type": "string"
+                }
+            }
+        },
+        "ValidateRuleResponse": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "result": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "RegisterRule": {
+            "type": "object",
+            "required": [
+                "data",
+                "name",
+                "reasoning",
+                "ruleContent",
+                "sensor"
+            ],
+            "properties": {
+                "created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "fullData": {
+                    "type": "string"
+                },
+                "hashedSensor": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "inferredData": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "longitude": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "quantityKind": {
+                    "type": "string"
+                },
+                "reasoning": {
+                    "$ref": "#/definitions/Reasoning"
+                },
+                "ruleContent": {
+                    "type": "string"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "sensorEndp": {
+                    "type": "string"
+                },
+                "sensorMeta": {
+                    "type": "string"
+                },
+                "unitOfMeasurement": {
+                    "type": "string"
+                },
+                "updated": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            }
+        },
+        "Sensor": {
+            "type": "object",
+            "properties": {
+                "displaySensor": {
+                    "type": "string"
+                },
+                "endp": {
+                    "type": "string"
+                },
+                "hashedSensor": {
+                    "type": "string"
+                },
+                "lat": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "lng": {
+                    "type": "number",
+                    "format": "float"
+                },
+                "qk": {
+                    "type": "string"
+                },
+                "sensor": {
+                    "type": "string"
+                },
+                "sensorData": {
+                    "type": "string"
+                },
+                "shortQk": {
+                    "type": "string"
+                },
+                "shortUnit": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
